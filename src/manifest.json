@@ -1,0 +1,32 @@
+{
+  "name": "Prevent-Timeout",
+  "description": "Prevent session timeout.",
+  "version": "0.9.5",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["cookies", "activeTab", "scripting", "commands"],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "commands": {
+    "_execute_action": {
+			"suggested_key": {
+        "windows": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P",
+        "chromeos": "Ctrl+Shift+P",
+        "linux": "Ctrl+Shift+P"
+			},
+			"description": "Prevent-Timeout",
+			"global": false		
+		}
+  },
+  "action": {
+    "default_title": "Prevent-Timeout",
+    "default_icon": "/prevent-timeout-icon.png"
+  },
+  "icons": {
+    "128": "/prevent-timeout-icon.png"
+  }
+}
